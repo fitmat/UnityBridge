@@ -7,7 +7,7 @@ import com.fitmat.fitmatdriver.Connection.BluetoothConnection;
 public class StartActivity extends UnityPlayerActivity {
     private static final String TAG = "bluetooth2";
 
-     // MAC-address of Bluetooth module (you must edit this line)
+    //STEP 0- Setting MAC-address of Bluetooth module (you must edit this line)
     private static String address = "00:18:91:D6:A8:C8";//"00:18:E4:35:B0:88";
 
     /** Called when the activity is first created. */
