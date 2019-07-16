@@ -12,8 +12,8 @@ A Driver that connects between Fitmat and Game
 
 
 ## Usage
+Importing FMDriver classes
 ```java
-
 import com.fitmat.fitmatdriver.DriverControl;
 import com.fitmat.fitmatdriver.Connection.BluetoothConnection;
 ```
