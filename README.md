@@ -16,34 +16,39 @@ A Driver that connects between Fitmat and Game
 
 import com.fitmat.fitmatdriver.DriverControl;
 import com.fitmat.fitmatdriver.Connection.BluetoothConnection;
+```
 
 //STEP 0- Setting MAC-address of Bluetooth module (you must edit this line)
-        private static String address = "00:18:91:D6:A8:C8";
-
+```java
+private static String address = "00:18:91:D6:A8:C8";
+```
 //STEP 1- Setting cluster ID
-        DriverControl.setGameID(2);
-
+```java
+DriverControl.setGameID(2);
+```
 //STEP 2- Setting up Bluetooth address
-        BluetoothConnection object = new BluetoothConnection(address);
-
+```java
+BluetoothConnection object = new BluetoothConnection(address);
+```
 //STEP 3- Setup the listener for this object
-        object.setCustomObjectListener(new BluetoothConnection.CustomObjectListenerInterface() {
-            @Override
-            public void onObjectReady(String title) {
-                Log.e("FMDRIVER","in onObjectReady");
-            }
+```java
+object.setCustomObjectListener(new BluetoothConnection.CustomObjectListenerInterface() {
+    @Override
+    public void onObjectReady(String title) {
+        Log.e("FMDRIVER","in onObjectReady");
+    }
 
-            //STEP 4- Response of FMDriver
-            @Override
-            public void onDataLoaded(String DriverResponse) {
-                if(DriverResponse.trim().equals("Null")){
-                    Log.i("INSIDE IF", DriverResponse);
-                }
-                else {
-                    TestClassPlugin.movingvalue = DriverResponse;
-                }
-            }
-        });
+    //STEP 4- Response of FMDriver
+    @Override
+    public void onDataLoaded(String DriverResponse) {
+        if(DriverResponse.trim().equals("Null")){
+            Log.i("INSIDE IF", DriverResponse);
+        }
+        else {
+            TestClassPlugin.movingvalue = DriverResponse;
+        }
+    }
+});
 ```
 
 Please make sure to update tests as appropriate.
