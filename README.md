@@ -42,9 +42,10 @@ object.setCustomObjectListener(new BluetoothConnection.CustomObjectListenerInter
     @Override
     public void onDataLoaded(String DriverResponse) {
         if(DriverResponse.trim().equals("Null")){
-            Log.i("INSIDE IF", DriverResponse);
+            Log.i("NULL RESPONSE", DriverResponse);
         }
         else {
+            Log.i("ACTION", DriverResponse);
             TestClassPlugin.movingvalue = DriverResponse;
         }
     }
