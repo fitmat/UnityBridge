@@ -1,3 +1,6 @@
+# PLUGIN - OUTDATED
+Unity Bridge is outdated. Use on your own risk. Please look at updated plugin called [FMBridge](https://github.com/fitmat/FMBridge)
+
 # Android Unity Bridge
 
 Unity Bridge is a bridge between FMDriver and Unity. Unity has a listener which gets all the ACTION_RESPONSE from FMDriver.
